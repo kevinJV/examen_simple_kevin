@@ -22,4 +22,9 @@ class ContextController extends Controller
         //Return Importante values CAN BE STATIC STRINGS O CONSTANTS
     }
 
+    //SettingServer is a private function, so Action should be called from a public context
+    public function Action(){
+        self::SettingsServer();
+    }
+
 }

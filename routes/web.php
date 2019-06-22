@@ -16,4 +16,6 @@ $app->get('/', function () use ($app) {
 });
 
 //Make it work
-$app->post('name_my_route/','PrototypeController@__construct');
+//Initially the constructor message was called, but thats wrong, it is already called when the class is initialized so instead of-
+//- calling __construct now I call _getContext
+$app->post('mensaje/','PrototypeController@_getContext');
